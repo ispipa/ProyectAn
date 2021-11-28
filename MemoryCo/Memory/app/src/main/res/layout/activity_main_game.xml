@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainGame">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jugador:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="30s"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCorazones"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/heart0"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart4"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart5"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart6"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart7"
+            android:layout_width="115dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCorazones">
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Puntuación: "
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ImageView
+            android:id="@+id/card0"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="0"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="1"
+            app:srcCompat="@drawable/magic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <ImageView
+            android:id="@+id/card2"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="2"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/card3"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="3"
+            app:srcCompat="@drawable/magic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <ImageView
+            android:id="@+id/card4"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="4"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/card5"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="5"
+            app:srcCompat="@drawable/magic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageView
+            android:id="@+id/card6"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="6"
+            app:srcCompat="@drawable/magic" />
+
+        <ImageView
+            android:id="@+id/card7"
+            android:layout_width="186dp"
+            android:layout_height="107dp"
+            android:layout_weight="1"
+            android:onClick="onClickCard"
+            android:tag="7"
+            app:srcCompat="@drawable/magic" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="301dp"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <EditText
+        android:id="@+id/NombreJugador"
+        android:layout_width="326dp"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:hint="What’s your name?"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <RadioGroup
+        android:id="@+id/dificultad"
+        android:layout_width="362dp"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611">
+
+        <RadioButton
+            android:id="@+id/facil"
+            android:layout_width="121dp"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="fácil"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <RadioButton
+            android:id="@+id/medio"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:text="medio"
+            tools:layout_editor_absoluteX="-7dp"
+            tools:layout_editor_absoluteY="439dp" />
+
+        <RadioButton
+            android:id="@+id/dificil"
+            android:layout_width="117dp"
+            android:layout_height="match_parent"
+            android:text="dificil" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/jugar"
+        android:layout_width="101dp"
+        android:layout_height="49dp"
+        android:text="PLAY!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
